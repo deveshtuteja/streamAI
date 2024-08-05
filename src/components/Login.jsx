@@ -22,6 +22,8 @@ const Login = () => {
     );
     setErrMsg(msg);
     // console.log(msg);
+    if (msg) return;
+    //SIGN IN SIGN UP LOGIC
   };
 
   return (
