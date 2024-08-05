@@ -1,6 +1,12 @@
 import { useRef, useState } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../utils/firebase";
+
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const email = useRef(null);
@@ -13,17 +19,53 @@ const Login = () => {
   };
 
   const handleBtnClick = () => {
-    //validate the form data
-    // checkValidData(email, password);
-    const msg = checkValidData(
-      email.current.value,
-      password.current.value,
-      name.current.value
-    );
+    let msg = "";
+    if (!isSignInForm) {
+      msg = checkValidData(
+        email.current.value,
+        password.current.value,
+        name.current?.value || ""
+      );
+    } else {
+      msg = checkValidData(email.current.value, password.current.value);
+    }
     setErrMsg(msg);
-    // console.log(msg);
+
     if (msg) return;
-    //SIGN IN SIGN UP LOGIC
+
+    if (!isSignInForm) {
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrMsg(errorCode + " - " + errorMessage);
+        });
+    } else {
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrMsg(errorCode + " - " + errorMessage);
+        });
+    }
   };
 
   return (
@@ -73,7 +115,7 @@ const Login = () => {
         </button>
         <p className="p-2 my-2 hover:cursor-pointer" onClick={toggleSignIn}>
           {isSignInForm
-            ? "New to Netlix? Sign Up Now"
+            ? "New to Netflix? Sign Up Now"
             : "Already a user? Sign In Now"}
         </p>
       </form>
