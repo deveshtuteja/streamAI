@@ -2,6 +2,8 @@
 
 - Vite app
 - Configured tailwind CSS
+- Header
+- Login Form
 
 # Features
 

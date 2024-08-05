@@ -1,11 +1,7 @@
-import "./App.css";
+import Body from "./components/Body";
 
 function App() {
-  return (
-    <div className="font-bold text-center text-green-800 text-5xl m-auto p-4">
-      Lets start building StreamGPT!
-    </div>
-  );
+  return <Body />;
 }
 
 export default App;
