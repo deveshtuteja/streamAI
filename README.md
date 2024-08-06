@@ -10,6 +10,11 @@
 - useRef Hook
 - Firebase Setup
 - Create Sign Up User Account
+- Implement Sign in user api
+- Redux Store with userSlice
+- Update Profile
+- Implemented Sign Out feature
+- Fetch Movies from TMDB
 
 # Features
 
