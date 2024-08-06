@@ -14,7 +14,9 @@
 - Redux Store with userSlice
 - Update Profile
 - Implemented Sign Out feature
-- Fetch Movies from TMDB
+- Bug Fix: if the user is logged in, redirect him to /browse page and vice versa
+- Unsubscribed to the onAuthStateChanged callback
+- Add hard coded values to the constants file
 
 # Features
 
