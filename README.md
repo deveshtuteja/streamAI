@@ -1,4 +1,4 @@
-# StreamGPT
+# StreamAI
 
 - Vite app
 - Configured tailwind CSS
@@ -17,6 +17,8 @@
 - Bug Fix: if the user is logged in, redirect him to /browse page and vice versa
 - Unsubscribed to the onAuthStateChanged callback
 - Add hard coded values to the constants file
+- Register on TMDB website for TMDB API & create an app & get an access token
+- Get data from the TMDB now playing movies list
 
 # Features
 
