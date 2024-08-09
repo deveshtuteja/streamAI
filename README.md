@@ -26,6 +26,7 @@
 - update store with trailer video data
 - embedded the YT video and make it autoplay and mute
 - Tailwind classes added to make Main Container awesome
+- Build secondary component
 
 # Features
 
@@ -42,3 +43,7 @@
 -StreamGPT
 -Search bar
 -Movie suggestions
+
+# NOTE
+
+- Tmdb is banned in India. It doesn't work on Jio
