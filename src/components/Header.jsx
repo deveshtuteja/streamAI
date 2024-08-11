@@ -44,7 +44,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="absolute px-12 py-8 z-10 flex justify-between w-screen bg-gradient-to-b from-black">
+    <div className="absolute px-12 pt-8 pb-2 z-10 flex justify-between w-screen bg-gradient-to-b from-black bg-black">
       <img
         className="w-36 fill-current"
         src={LOGO_URL}
