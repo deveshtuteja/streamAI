@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import lang from "../utils/languageConstants";
 import { useRef } from "react";
-import { model } from "./gemini";
+import { model } from "../utils/gemini";
 
 const GptSearchBar = () => {
   const langKey = useSelector((store) => store.config.lang);
