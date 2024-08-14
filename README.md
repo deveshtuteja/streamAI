@@ -37,6 +37,9 @@
 - GPT Search Page
 - GPT Search Bar
 - Added multi-language feature to gpt search page
+- Google Gemini setup
+- Extracted Responses from Gemini
+- pushed movieNames and movieResults into the store
 
 # Features
 
