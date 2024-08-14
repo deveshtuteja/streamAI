@@ -40,6 +40,8 @@
 - Google Gemini setup
 - Extracted Responses from Gemini
 - pushed movieNames and movieResults into the store
+- implemented memoization
+- made app responsive
 
 # Features
 

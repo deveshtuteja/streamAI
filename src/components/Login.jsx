@@ -95,10 +95,14 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src={BG_URL} alt="netflix-bg-img" />
+        <img
+          src={BG_URL}
+          alt="netflix-bg-img"
+          className="h-screen object-cover md:object-fill md:w-screen md:h-screen"
+        />
       </div>
       <form
-        className="absolute p-12 w-3/12 bg-[rgba(0,0,0,0.85)] mx-auto right-0 left-0 my-44 text-white rounded-lg"
+        className="absolute p-12 w-full md:w-3/12 bg-[rgba(0,0,0,0.85)] mx-auto right-0 left-0 my-44 text-white rounded-lg"
         onSubmit={(e) => {
           e.preventDefault();
         }}
