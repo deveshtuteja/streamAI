@@ -123,12 +123,14 @@ const Login = () => {
           type="text"
           placeholder="Email or mobile number"
           className="my-4 p-2 w-full bg-[rgba(0,0,0,0.85)] border border-solid border-transparent-50 rounded-sm"
+          defaultValue="test@gmail.com"
         />
         <input
           ref={password}
           type="password"
           placeholder="Password"
           className="my-4 p-2 w-full bg-[rgba(0,0,0,0.85)] border border-solid border-transparent-50 rounded-sm"
+          defaultValue="test@123"
         />
         <p className="text-red-500 text-lg">{errMsg}</p>
         <button

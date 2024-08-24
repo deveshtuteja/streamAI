@@ -1,10 +1,16 @@
 const VideoTitle = ({ title, overview }) => {
+  const handlePlayClick = () => {
+    // Video Full Screen
+  };
   return (
     <div className="w-screen aspect-video pt-[30%] md:pt-[17%] px-4 md:px-24 absolute text-white bg-gradient-to-l from-black">
       <h1 className="text-lg md:text-5xl font-bold">{title}</h1>
       <p className="hidden md:inline-block text-lg py-6 w-1/4">{overview}</p>
       <div className="my-1 md:my-0">
-        <button className="bg-white text-black p-2 md:p-4 px-4 md:px-12 text-lg md:text-xl rounded-lg hover:bg-opacity-80">
+        <button
+          className="bg-white text-black p-2 md:p-4 px-4 md:px-12 text-lg md:text-xl rounded-lg hover:bg-opacity-80"
+          onClick={handlePlayClick}
+        >
           ▶️Play
         </button>
         <button className="bg-white text-white p-2 md:p-4 px-4 md:px-12 text-lg md:text-xl bg-opacity-30 rounded-lg mx-2 hover:bg-opacity-10">
