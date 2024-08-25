@@ -8,7 +8,7 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBkqcEgqHM4vGZTVZcYW_lKSaz9kag4FmE",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "streamgpt-75c21.firebaseapp.com",
   projectId: "streamgpt-75c21",
   storageBucket: "streamgpt-75c21.appspot.com",
