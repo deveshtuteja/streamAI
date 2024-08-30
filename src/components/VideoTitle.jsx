@@ -1,6 +1,9 @@
-const VideoTitle = ({ title, overview }) => {
+import { useNavigate } from "react-router-dom";
+
+const VideoTitle = ({ title, overview, movieId }) => {
+  const navigate = useNavigate();
   const handlePlayClick = () => {
-    // Video Full Screen
+    navigate("/movie/" + movieId);
   };
   return (
     <div className="w-screen aspect-video pt-[30%] md:pt-[17%] px-4 md:px-24 absolute text-white bg-gradient-to-l from-black">
