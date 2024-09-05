@@ -80,7 +80,7 @@ const Header = () => {
             className="p-2 mx-4 my-2 rounded-lg bg-purple-800 text-white"
             onClick={handleGptSearchClick}
           >
-            {showGptSearch ? "Home" : "GPT Search"}
+            {showGptSearch ? "Home" : "Smart Search"}
           </button>
           <img
             src={user.photoURL}

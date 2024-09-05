@@ -6,7 +6,7 @@ const VideoTitle = ({ title, overview, movieId }) => {
     navigate("/movie/" + movieId);
   };
   return (
-    <div className="w-screen aspect-video pt-[30%] md:pt-[17%] px-4 md:px-24 absolute text-white bg-gradient-to-l from-black">
+    <div className="w-screen aspect-video pt-[30%] md:pt-[14%] px-4 md:px-24 absolute text-white bg-gradient-to-l from-black">
       <h1 className="text-lg md:text-5xl font-bold">{title}</h1>
       <p className="hidden md:inline-block text-lg py-6 w-1/4">{overview}</p>
       <div className="my-1 md:my-0">
